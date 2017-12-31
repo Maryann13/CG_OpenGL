@@ -1,0 +1,8 @@
+uniform vec4 color1, color2;
+uniform vec2 strip_width;
+void main() {
+  if (mod(gl_FragCoord.x, strip_width.x) < strip_width.y)
+     gl_FragColor = color1;
+  else
+     gl_FragColor = color2;
+}
